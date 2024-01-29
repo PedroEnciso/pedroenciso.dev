@@ -1,0 +1,54 @@
+:root {
+  /* define colors used */
+  --zinc-50: #fafafa;
+  --zinc-200: #a1a1aa;
+  --zinc-900: #18181b;
+  --zinc-700: #3f3f46;
+  --cyan-500: #06b6d4;
+  --blue-100: #dbeafe;
+  --cyan-50: #ecfeff;
+
+  /* store in variables */
+  --text-dark: var(--zinc-900);
+  --text-dark-default: var(--zinc-700);
+  --text-light: var(--zinc-50);
+  --text-light-default: var(--zinc-200);
+
+  --background-light: var(--zinc-50);
+  --background-dark: var(--zinc-900);
+
+  --accent-color: var(--cyan-500);
+  --background-gradient: linear-gradient(
+    132deg,
+    var(--blue-100),
+    var(--cyan-50)
+  );
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Fira Code", monospace;
+  background-color: #fafafa;
+  color: var(--text-dark-default);
+  line-height: 1.5;
+  font-weight: 400;
+  padding-bottom: 5rem;
+}
+
+/* .main-wrapper {} */
+
+.text-lg {
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.small-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}

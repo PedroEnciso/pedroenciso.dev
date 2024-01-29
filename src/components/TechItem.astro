@@ -1,0 +1,31 @@
+---
+interface Props {
+  techList: string[];
+}
+
+const {techList} = Astro.props;
+---
+
+<ul>
+  {techList.map(tech => (
+    <li>{tech}</li>
+  ))}
+</ul>
+
+<style>
+  ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  li {
+    padding: .25rem .5rem;
+    background-color: #ffffff10;
+    font-size: .875rem;
+    font-weight: 500;
+    color: var(--accent-color);
+    border-radius: 50px;
+  }
+</style>

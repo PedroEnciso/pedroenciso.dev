@@ -1,0 +1,32 @@
+---
+interface Props {
+  title: string;
+  techList: string[];
+}
+
+const {title, techList} = Astro.props;
+---
+<div>
+  <p class="title">{title}</p>
+  <ul class="list-wrapper">
+    {techList.map(tech => (
+      <li>{tech}</li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .title {
+    font-size: .875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .5rem;
+  }
+
+  .list-wrapper {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+</style>

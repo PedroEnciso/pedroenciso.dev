@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+import BioSection from '../components/BioSection.astro'
+import TechSection from '../components/TechSection.astro'
+import ContactSection from '../components/ContactSection.astro'
+import DarkBackgroundSmall from "../components/DarkBackgroundSmall.astro"
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Pedro Enciso</title>
+		<style>
+
+		</style>
+	</head>
+	<body>
+		<BioSection />
+		<DarkBackgroundSmall />
+		<TechSection />
+		<ContactSection />
+	</body>
+</html>
