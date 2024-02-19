@@ -27,4 +27,22 @@ import ProjectSection from './ProjectSection.astro'
     flex-direction: column;
     gap: 6rem;
   }
+
+  /* tablet styles */
+  @media screen and (min-width: 768px) {
+    .dark-wrapper {
+      margin: 6rem 0rem 0rem;
+    }
+
+    .content-wrapper {
+      width: 80%;
+    }
+  }
+
+  /* desktop styles */
+  @media screen and (min-width: 1025px) {
+    .dark-wrapper {
+      display: none;
+    }
+  }
 </style>

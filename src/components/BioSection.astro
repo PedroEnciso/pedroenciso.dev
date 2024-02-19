@@ -74,4 +74,25 @@
   .email-link:hover {
     text-decoration: underline;
   }
+
+  /* tablet styles */
+  @media screen and (min-width: 768px) {
+    .content-wrapper {
+      margin: 6.5rem auto 0rem;
+      width: 80%;
+    }
+  }
+
+  /* desktop styles */
+  @media screen and (min-width: 1025px) {
+    .content-wrapper {
+      margin: 0rem auto 0rem;
+      grid-area: bio;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+  }
 </style>

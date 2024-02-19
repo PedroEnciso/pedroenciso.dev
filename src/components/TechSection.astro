@@ -36,7 +36,7 @@
 
   .list-wrapper {
     width: 90%;
-    margin: 2rem auto 0rem;
+    margin: 2rem auto 4rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -48,5 +48,27 @@
     position: absolute;
     top: 100%;
     transform: translateY(-100%);
+  }
+
+  /* tablet styles */
+  @media screen and (min-width: 768px) {
+    .title {
+      width: 80%;
+    }
+
+    .list-wrapper {
+      width: 80%;
+      margin: 2rem auto 6rem;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: start;
+    }
+  }
+
+  /* desktop styles */
+  @media screen and (min-width: 1025px) {
+    .wrapper {
+      display: none;
+    }
   }
 </style>

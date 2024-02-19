@@ -1,0 +1,37 @@
+---
+import AboutSection from "./AboutSection.astro"
+import ProjectSection from './ProjectSection.astro'
+---
+
+<section class="wrapper">
+  <div class="content-wrapper">
+    <AboutSection />
+    <ProjectSection />
+  </div>
+</section>
+
+<style>
+  .wrapper {
+    display: none;
+  }
+
+  /* desktop styles */
+  @media screen and (min-width: 1025px) {
+    .wrapper {
+      display: block;
+      grid-area: large-dark;
+      height: 100vh;
+      overflow: scroll;
+    }
+
+    .content-wrapper {
+      margin-top: 6rem;
+      background-color: var(--background-dark);
+      border-radius: 20px 20px 0px 0px;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+    }
+  }
+</style>
