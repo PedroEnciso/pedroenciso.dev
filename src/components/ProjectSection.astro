@@ -69,8 +69,12 @@ const allProjects = await getCollection('projects');
   .wip {
     font-size: .75rem;
     line-height: 1;
-    align-self: center;
-    margin-left: -1.5rem;
+  }
+  @container (width > 400px) {
+    .wip {
+      align-self: center;
+      margin-left: -1.5rem;
+    }
   }
 
   .link-wrapper {
