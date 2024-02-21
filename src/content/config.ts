@@ -5,7 +5,7 @@ const projectCollection = defineCollection({
   schema: z.object({
     name: z.string(),
     siteLink: z.string().optional(),
-    githubLink: z.string(),
+    githubLink: z.string().optional(),
     description: z.string(),
     techStack: z.array(z.string()),
   }),

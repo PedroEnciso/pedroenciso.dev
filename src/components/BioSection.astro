@@ -1,98 +1,162 @@
-<section class="content-wrapper">
-  <h1 class="name">Pedro Enciso</h1>
-  <p class="title">Frontend Web Developer</p>
-  <p class="bio">I love to build applications and learn new web technologies.</p>
-  <div class="link-wrapper">
-    <a href="#" class="link email-link">email me </a>
-    <a href='#' class="link resume-link">resume</a>
+---
+import ContactIcons from './ContactIcons.astro'
+---
+
+<div class="content section_content_margin">
+  <div class="header">
+    <div class="name_container">
+      <h1 class="name">Pedro Enciso</h1>
+      <p class="title">Frontend Web Developer</p>
+    </div>
+    <div class="contact_icons">
+      <ContactIcons />
+    </div>
   </div>
-</section>
+  <p class="bio">I love to build applications and learn new web technologies.</p>
+  <div class="btn_container">
+    <button class="btn">
+      resume
+      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow"><line x1="0" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+    </button>
+  </div>
+</div>
 
 <style>
-  .content-wrapper {
-    margin: 3rem auto 0rem;
-    width: 90%;
+  .content {
+    margin-top: 65px;
+  }
+  @container (width > 600px) {
+    .content {
+      margin-top: 100px;
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    .content {
+      margin-top: 0px;
+    }
+    .contact_icons {
+      display: none;
+    }
   }
 
   .name {
-    font-weight: 600;
+    font-weight: 700;
     color: var(--text-dark);
-    font-size: 3rem;
-    letter-spacing: -2.6px;
-    text-align: center;
+    font-size: 1.5rem;
+    letter-spacing: -4%;
     line-height: 1;
+    margin-bottom: 8px;
   }
 
   .title {
     font-weight: 500;
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.125rem;
     line-height: 1.25;
-    margin-top: 1rem;
   }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @container (min-width: 450px) {
+    .header {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 0rem;
+    }
+  }
+
+  /* .icon_container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .icon {
+    display: block;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    border: 2px solid var(--accent-secondary);
+    display: grid;
+    place-items: center;
+    transition: border-color .2s;
+    position: relative;
+  }
+
+  .icon:hover {
+    border-color: var(--accent-light);
+  }
+
+  .icon_svg {
+    stroke: var(--accent-secondary);
+    transition: stroke .2s;
+  }
+
+  .icon:hover .icon_svg {
+    stroke: var(--accent-light);
+  }
+
+  .icon_label {
+    font-weight: 600;
+    color: var(--accent);
+    position: absolute;
+    top: 100%;
+    opacity: 0%;
+    transition: opacity .2s, transform .2s; 
+  }
+
+  .icon:hover .icon_label {
+    opacity: 100%;
+    transform: translateY(15%);
+  } */
 
   .bio {
-    font-size: 1.25rem;
-    line-height: 1.2;
-    margin-top: 3rem;
-    text-align: center;
-  }
-
-  .link-wrapper {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .link {
-    text-decoration: none;
-    color: var(--accent-color);
-    color: var(--accent-color);
     font-size: 1rem;
+    line-height: 1.2;
+    margin-top: 32px;
+  }
+  @container (min-width: 450px) {
+    .bio {
+      margin-top: 16px;
+    }
+  }
+
+  .btn_container {
+    margin-top: 2rem;
+    height: 40px;
+    width: fit-content;
+  }
+
+  .btn {
+    font-size: .875rem;
+    background-color: var(--accent-very-light);
+    padding: 10px 24px;
+    border: 2px solid var(--accent);
     font-weight: 600;
-  }
-
-  .resume-link {
-    border: 2px solid var(--accent-color);
+    color: var(--accent);
     border-radius: 10px;
-    padding: .5rem 1rem;
+    cursor: pointer;
+    transition: transform .2s;
+    position: relative;
   }
 
-  .resume-link:hover {
-    border-bottom: 4px solid var(--accent-color);
-    transform: translateY(-4px);
+  .btn_container:hover .btn {
+    transform: translate(2px, -2px);
+    border-bottom: 4px solid var(--accent);
+    border-left: 4px solid var(--accent)
   }
 
-  .email-link {
-    border: 4px solid transparent;
-    border-radius: 10px;
-    padding: .5rem 1rem;
+  .arrow {
+    position: absolute;
+    right: 2px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0%;
+    transition: opacity .2s;
   }
 
-  .email-link:hover {
-    text-decoration: underline;
-  }
-
-  /* tablet styles */
-  @media screen and (min-width: 768px) {
-    .content-wrapper {
-      margin: 6.5rem auto 0rem;
-      width: 80%;
-    }
-  }
-
-  /* desktop styles */
-  @media screen and (min-width: 1025px) {
-    .content-wrapper {
-      margin: 0rem auto 0rem;
-      grid-area: bio;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-    }
+  .btn_container:hover .arrow {
+    opacity: 100%;
   }
 </style>

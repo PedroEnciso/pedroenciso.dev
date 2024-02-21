@@ -1,28 +1,24 @@
 :root {
   /* define colors used */
-  --zinc-50: #fafafa;
-  --zinc-200: #a1a1aa;
-  --zinc-900: #18181b;
-  --zinc-700: #3f3f46;
-  --cyan-500: #06b6d4;
-  --blue-100: #dbeafe;
-  --cyan-50: #ecfeff;
+  --erie-black: 30 30 29;
+  --narvik: 231 231 216;
+  --eagle: 174 172 149;
+  --fire-bush: 240 146 53;
+  --jaffa: 237 117 47;
+  --sorbus: 236 101 43;
 
   /* store in variables */
-  --text-dark: var(--zinc-900);
-  --text-dark-default: var(--zinc-700);
-  --text-light: var(--zinc-50);
-  --text-light-default: var(--zinc-200);
+  --text-dark: rgb(var(--erie-black));
+  --text-default: rgb(var(--erie-black) / 0.8);
 
-  --background-light: var(--zinc-50);
-  --background-dark: var(--zinc-900);
+  --accent: rgb(var(--jaffa));
+  --accent-light: rgb(var(--fire-bush));
+  --accent-very-light: rgb(var(--jaffa) / 0.1);
+  --accent-dark: rgb(var(--sorbus));
 
-  --accent-color: var(--cyan-500);
-  --background-gradient: linear-gradient(
-    132deg,
-    var(--blue-100),
-    var(--cyan-50)
-  );
+  --accent-secondary: rgb(var(--eagle));
+
+  --background: rgb(var(--narvik));
 }
 
 * {
@@ -33,18 +29,35 @@
 
 body {
   font-family: "Fira Code", monospace;
-  background-color: #fafafa;
-  color: var(--text-dark-default);
-  line-height: 1.5;
+  background-color: var(--background);
+  color: var(--text-default);
+  font-size: 0.875rem;
+  line-height: 1.75;
   font-weight: 400;
-  padding-bottom: 5rem;
 }
 
-/* .main-wrapper {} */
+.heading {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  letter-spacing: -2%;
+  line-height: 1;
+}
 
 .text-lg {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.2;
+  color: var(--text-dark);
+  font-weight: 500;
+}
+
+.section_content_margin {
+  margin-bottom: 90px;
+}
+@container (width > 600px) {
+  .section_content_margin {
+    margin-bottom: 135px;
+  }
 }
 
 .small-header {
@@ -53,12 +66,22 @@ body {
   color: var(--text-dark);
 }
 
+.content_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 670px;
+  container-type: inline-size;
+}
+
 /* desktop styles */
 @media screen and (min-width: 1025px) {
   body {
+    height: 100vh;
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0px auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "bio     large-dark";
-    padding-bottom: 0rem;
+    grid-template-areas: "left right";
   }
 }

@@ -1,19 +1,21 @@
 ---
 import '../styles/global.css';
+import SectionLayout from '../layouts/SectionLayout.astro'
+import LeftLayout from '../layouts/LeftLayout.astro'
+import RightLayout from '../layouts/RightLayout.astro'
 import BioSection from '../components/BioSection.astro'
-import TechSection from '../components/TechSection.astro'
-import ContactSection from '../components/ContactSection.astro'
-import DarkBackgroundSmall from "../components/DarkBackgroundSmall.astro"
-import DarkBackgroundLarge from '../components/DarkBackgroundLarge.astro'
+import ProjectSection from '../components/ProjectSection.astro';
+import TechSection from '../components/TechSection.astro';
+import ContactSection from '../components/ContactSection.astro';
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/PE.svg" />
+		<link rel="icon" type="image/svg+xml" href="/PE2.svg" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Pedro Enciso</title>
@@ -22,10 +24,25 @@ import DarkBackgroundLarge from '../components/DarkBackgroundLarge.astro'
 		</style>
 	</head>
 	<body>
-		<BioSection />
-		<DarkBackgroundSmall />
-		<TechSection />
-		<ContactSection />
-		<DarkBackgroundLarge />
+		<SectionLayout>
+			<BioSection />
+		</SectionLayout>
+		<SectionLayout>
+			<ProjectSection />
+		</SectionLayout>	
+		<SectionLayout>
+			<TechSection />
+		</SectionLayout>	
+		<SectionLayout>
+			<ContactSection />
+		</SectionLayout>
+		<LeftLayout>
+			<BioSection />
+			<ContactSection />
+		</LeftLayout>
+		<RightLayout>
+			<ProjectSection />
+			<TechSection />
+		</RightLayout>
 	</body>
 </html>

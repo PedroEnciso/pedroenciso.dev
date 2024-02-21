@@ -1,0 +1,18 @@
+<section class="content_wrapper wrapper section_content_margin">
+  <slot />
+</section>
+
+<style>
+  .wrapper {
+    display: none;
+  }
+  @media screen and (min-width: 1025px) {
+    .wrapper {
+      margin-top: 125px;
+      display: flex;
+      flex-direction: column;
+      grid-area: left;
+      height: 100%;
+    }
+  }
+</style>
