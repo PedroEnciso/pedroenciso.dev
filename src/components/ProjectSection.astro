@@ -14,11 +14,11 @@ const allProjects = await getCollection('projects');
           <p class="text-lg">{project.data.name}</p>  
           <div class="link-wrapper">
             {project.data.siteLink ? 
-              <a href={project.data.siteLink} class="link">
+              <a href={project.data.siteLink} target="_blank" class="link">
                 demo 
               </a> : null}
               {project.data.githubLink ? 
-                <a href={project.data.githubLink} class="link">
+                <a href={project.data.githubLink} target="_blank" class="link">
               github
             </a> : null}
           </div>
