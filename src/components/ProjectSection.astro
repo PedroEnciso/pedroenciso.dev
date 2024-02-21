@@ -22,6 +22,7 @@ const allProjects = await getCollection('projects');
               github
             </a> : null}
           </div>
+          {project.data.wip ? <p class="wip">(work in progress)</p> : null}
         </div>
         <p>{project.data.description}</p>
         <TechItem techList={project.data.techStack} />
@@ -60,9 +61,16 @@ const allProjects = await getCollection('projects');
   @container (width > 400px) {
     .name-link-wrapper {
       flex-direction: row;
-      align-items: end;
+      align-items: flex-end;
       gap: 1.5rem;
     }
+  }
+
+  .wip {
+    font-size: .75rem;
+    line-height: 1;
+    align-self: center;
+    margin-left: -1.5rem;
   }
 
   .link-wrapper {
@@ -73,6 +81,7 @@ const allProjects = await getCollection('projects');
   .link {
     color: var(--accent-light);
     font-size: .875rem;
+    line-height: 1;
     text-decoration: none;
     cursor: pointer;
     text-decoration: underline;

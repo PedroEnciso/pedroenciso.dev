@@ -8,6 +8,7 @@ const projectCollection = defineCollection({
     githubLink: z.string().optional(),
     description: z.string(),
     techStack: z.array(z.string()),
+    wip: z.boolean(),
   }),
 });
 

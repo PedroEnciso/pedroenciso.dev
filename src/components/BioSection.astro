@@ -1,5 +1,6 @@
 ---
 import ContactIcons from './ContactIcons.astro'
+import resume from '../assets/pedro_enciso.pdf'
 ---
 
 <div class="content section_content_margin">
@@ -14,10 +15,10 @@ import ContactIcons from './ContactIcons.astro'
   </div>
   <p class="bio">I love to build applications and learn new web technologies.</p>
   <div class="btn_container">
-    <button class="btn">
+    <a class="btn" href={resume} target="_blank">
       resume
       <svg xmlns="http://www.w3.org/2000/svg" width="18" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow"><line x1="0" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-    </button>
+    </a>
   </div>
 </div>
 
@@ -67,50 +68,6 @@ import ContactIcons from './ContactIcons.astro'
     }
   }
 
-  /* .icon_container {
-    display: flex;
-    gap: 20px;
-  }
-
-  .icon {
-    display: block;
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
-    border: 2px solid var(--accent-secondary);
-    display: grid;
-    place-items: center;
-    transition: border-color .2s;
-    position: relative;
-  }
-
-  .icon:hover {
-    border-color: var(--accent-light);
-  }
-
-  .icon_svg {
-    stroke: var(--accent-secondary);
-    transition: stroke .2s;
-  }
-
-  .icon:hover .icon_svg {
-    stroke: var(--accent-light);
-  }
-
-  .icon_label {
-    font-weight: 600;
-    color: var(--accent);
-    position: absolute;
-    top: 100%;
-    opacity: 0%;
-    transition: opacity .2s, transform .2s; 
-  }
-
-  .icon:hover .icon_label {
-    opacity: 100%;
-    transform: translateY(15%);
-  } */
-
   .bio {
     font-size: 1rem;
     line-height: 1.2;
@@ -136,6 +93,7 @@ import ContactIcons from './ContactIcons.astro'
     font-weight: 600;
     color: var(--accent);
     border-radius: 10px;
+    text-decoration: none;
     cursor: pointer;
     transition: transform .2s;
     position: relative;

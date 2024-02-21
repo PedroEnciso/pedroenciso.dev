@@ -2,6 +2,7 @@
 name: Kanban Task App
 siteLink: site link
 githubLink: github link
-description: Lab Husky mix, a unique blend of the friendly Labrador Retriever and the resilient Siberian Husky, boasts a striking appearance and a vibrant personality. This hybrid is known for its intelligence and energy, requiring regular exercise and mental stimulation to thrive. With their loyal and affectionate nature, Lab Husky mixes make excellent companions for active families who enjoy outdoor adventures.
+description: Web app designed to help users manage their tasks and projects efficiently through a clean user interface. Projects and tasks are persisted with LocalStorage, so users are able to track their progress over time. Design was provided by Frontend Mentor.
 techStack: ["javascript", "react", "tailwindCSS"]
+wip: false
 ---

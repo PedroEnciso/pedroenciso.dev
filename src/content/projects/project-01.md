@@ -1,5 +1,15 @@
 ---
 name: myqualitymanager.com
-description: The Labrador Retriever, known for its friendly nature and intelligence, is a beloved companion in many households. With a coat that ranges from black, chocolate, to a radiant yellow, this breed is both beautiful and adaptable to various lifestyles. Labradors are known for their loyalty and trainability, making them excellent family pets and reliable working dogs.
-techStack: ["typescript", "vue", "tailwindCSS", "express"]
+description: myqualitymanager.com is a library of Standard Operating Procedure (SOP) templates that allows customers to browse, purchase, customize and store their templates. Admin users are able to login and upload new templates, and  create or edit their products. In this project, I am responsible for the front end user experience for customers and admin.
+techStack:
+  [
+    "typescript",
+    "vue",
+    "tailwindCSS",
+    "express",
+    "trpc",
+    "sequlaize",
+    "supabase",
+  ]
+wip: true
 ---
