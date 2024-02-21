@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import coffee from '../assets/coffee.svg'
 import SectionLayout from '../layouts/SectionLayout.astro'
 import LeftLayout from '../layouts/LeftLayout.astro'
 import RightLayout from '../layouts/RightLayout.astro'
@@ -12,7 +13,7 @@ import ContactSection from '../components/ContactSection.astro';
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href='/public/coffee.svg' />
+		<link rel="icon" type="image/svg+xml" href={coffee.src} />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&display=swap" rel="stylesheet">
